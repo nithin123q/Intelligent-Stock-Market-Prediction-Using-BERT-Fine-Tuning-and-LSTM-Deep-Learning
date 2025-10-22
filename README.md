@@ -58,4 +58,141 @@ By fusing both textual and numerical insights, the model provides a more holisti
 
 
 
+## 🧠 Intelligent Stock Market Prediction Using BERT Fine-Tuning & LSTM
+##
+## Combines BERT fine-tuning for tweet sentiment analysis with LSTM-based time-series forecasting
+## to build an end-to-end intelligent system that interprets market sentiment
+## and predicts stock price trends.
+
+## ------------------------------------------------------------
+## 🚀 Quick Start (Colab)
+## ------------------------------------------------------------
+## 🔗 Open in Google Colab:
+## https://colab.research.google.com/drive/18JuWsYk2D8PXxjHdu9MzTotFufubExUk?usp=sharing
+
+## ------------------------------------------------------------
+## 🧩 Step 1 — Load Dataset
+## ------------------------------------------------------------
+## from datasets import load_dataset
+## dataset = load_dataset("StephanAkkerman/stock-market-tweets-data")
+##
+## Loads financial tweets for sentiment analysis.
+## If the dataset fails to load, use a CSV with 'text' and 'label' columns.
+
+## ------------------------------------------------------------
+## 🧹 Step 2 — Preprocess Data
+## ------------------------------------------------------------
+## Run the Preprocessing and Cleaning cell to:
+## - Clean and normalize text
+## - Filter short tweets
+## - Tokenize using the BERT tokenizer
+## - Split into train / validation / test sets
+##
+## ✅ Example:
+## Preprocessing done.
+## Splits – train 5000 | val 1000 | test 1000
+
+## ------------------------------------------------------------
+## 🧠 Step 3 — Fine-Tune Model
+## ------------------------------------------------------------
+## trainer.train()
+##
+## Trains for 3 epochs (lr=2e-5) and automatically saves:
+## - Logs → ./logs
+## - Model checkpoints → ./results
+
+## ------------------------------------------------------------
+## 📊 Step 4 — Evaluate Performance
+## ------------------------------------------------------------
+## results = trainer.evaluate(test_dataset)
+## print(results)
+##
+## Displays:
+## - Accuracy
+## - Precision
+## - Recall
+## - F1-Score
+##
+## Compares fine-tuned model with baseline (BERT-base-cased).
+
+## ------------------------------------------------------------
+## 🔍 Step 5 — Error Analysis
+## ------------------------------------------------------------
+## for i in incorrect_indices[:5]:
+##     print(test_dataset[i]['text'], predictions[i])
+##
+## Identifies common misclassifications such as:
+## - Sarcasm or irony
+## - Ambiguous text
+## - Sentiment reversals
+
+## ------------------------------------------------------------
+## 🤖 Step 6 — Inference
+## ------------------------------------------------------------
+## text = "Apple shares rally after strong iPhone sales."
+## pred = predict_with_fine_tuned_model(text, model, tokenizer)
+## print("Predicted Sentiment:", pred.item())
+##
+## Predicts sentiment for new stock-related tweets using your fine-tuned BERT model.
+
+## ------------------------------------------------------------
+## 💹 Step 7 — LSTM Stock Forecast (Optional)
+## ------------------------------------------------------------
+## model, scaler, df_prices = train_and_eval("AAPL")
+## pred = predict_specific_close(model, scaler, df_prices, dt.date(2025,10,1))
+## print("Predicted Close:", round(pred,2))
+##
+## LSTM achieved RMSE ≈ 2.93 — strong short-term forecast accuracy for AAPL.
+
+## ------------------------------------------------------------
+## 🗂️ Project Files
+## ------------------------------------------------------------
+## 📂 Intelligent-Stock-Prediction/
+## ├── StockMarket_Prediction.ipynb
+## ├── sentiment_model/
+## ├── Technical_Report.docx
+## ├── Presentation_PPT.pptx
+## ├── requirements.txt
+## └── README.md
+
+## ------------------------------------------------------------
+## 📈 Results Summary
+## ------------------------------------------------------------
+## Metric      | Baseline | Fine-Tuned
+## ------------|-----------|-----------
+## Accuracy    | 81.4%     | 89.7%
+## F1-Score    | 79.2%     | 88.3%
+## Precision   | 80.5%     | 87.9%
+## Recall      | 77.8%     | 88.6%
+## LSTM RMSE   | —         | 2.93
+##
+## Fine-tuned BERT model improved sentiment accuracy,
+## while LSTM provided consistent short-term stock predictions.
+
+## ------------------------------------------------------------
+## ⚙️ Setup Instructions
+## ------------------------------------------------------------
+## pip install -r requirements.txt
+## pip freeze > requirements.txt   # export current environment
+
+## ------------------------------------------------------------
+## 💻 Technologies Used
+## ------------------------------------------------------------
+## - Python 3.10+
+## - Hugging Face Transformers
+## - TensorFlow / Keras
+## - scikit-learn, pandas, matplotlib
+## - yfinance (for stock data)
+
+## ------------------------------------------------------------
+## 👨‍💻 Author
+## ------------------------------------------------------------
+## Nithin Yash Menezes
+## Northeastern University | MSIS
+## 📧 nithin.menezes@northeastern.edu
+
+## ------------------------------------------------------------
+## 🏁 License
+## ------------------------------------------------------------
+## Open-source | Educational & Research Use Only
 
