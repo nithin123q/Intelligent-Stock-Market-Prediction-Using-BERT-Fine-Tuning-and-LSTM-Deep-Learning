@@ -1,1 +1,27 @@
+# Core Libraries
+numpy==1.26.4
+pandas==2.2.2
+scikit-learn==1.5.1
+matplotlib==3.9.2
+
+# Hugging Face Transformers for BERT Fine-Tuning
+transformers==4.45.2
+datasets==3.0.1
+tokenizers==0.19.1
+accelerate==0.34.2
+evaluate==0.4.2
+
+# Deep Learning (for LSTM)
+tensorflow==2.17.0
+keras==3.4.1
+
+# Financial Data
+yfinance==0.2.43
+
+# Text and Notebook Utilities
+ipython==8.27.0
+tqdm==4.66.4
+
+# Optional: for saving reports and generating documentation
+python-docx==1.1.2
 
