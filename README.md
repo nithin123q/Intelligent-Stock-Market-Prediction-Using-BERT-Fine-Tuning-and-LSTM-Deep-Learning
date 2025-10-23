@@ -58,9 +58,10 @@ By fusing both textual and numerical insights, the model provides a more holisti
 
 
 ##🧩 Step 1 — Load Dataset
+```
 from datasets import load_dataset
 dataset = load_dataset("StephanAkkerman/stock-market-tweets-data")
-
+```
 
 **Loads financial tweets for sentiment analysis.**
 **If the dataset fails to load, use any CSV with text and label columns.**
@@ -83,19 +84,20 @@ dataset = load_dataset("StephanAkkerman/stock-market-tweets-data")
 **Splits – train 5000 | val 1000 | test 1000**
 
 ## 🧠 Step 3 — Fine-Tune Model
-trainer.train()
+```trainer.train()```
 
 
 **Trains for 3 epochs (learning rate = 2e-5) and automatically saves:**
 
-**Logs → ./logs**
+```Logs → ./logs```
 
-**Model checkpoints → ./results**
+Model checkpoints → ./results
 
 ## 📊 Step 4 — Evaluate Performance
-**results = trainer.evaluate(test_dataset)**
-**print(results)**
-
+```
+results = trainer.evaluate(test_dataset)
+print(results)
+```
 
 **Displays key metrics:**
 
