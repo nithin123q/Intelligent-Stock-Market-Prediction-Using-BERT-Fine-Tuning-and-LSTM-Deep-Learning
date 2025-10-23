@@ -110,9 +110,10 @@ trainer.train()
 Compares fine-tuned model with baseline BERT-base-cased.
 
 ## 🔍 Step 5 — Error Analysis
+```python
 for i in incorrect_indices[:5]:
     print(test_dataset[i]['text'], predictions[i])
-
+```
 
 **Identifies common misclassifications such as:**
 
@@ -123,37 +124,43 @@ for i in incorrect_indices[:5]:
 **Sentiment reversals**
 
 ## 🤖 Step 6 — Inference
+```
 text = "Apple shares rally after strong iPhone sales."
 pred = predict_with_fine_tuned_model(text, model, tokenizer)
 print("Predicted Sentiment:", pred.item())
-
+```
 
 **Predicts sentiment for new stock-related tweets using your fine-tuned BERT model.**
 
 ## 💹 Step 7 — LSTM Stock Forecast (Optional)
+```
 model, scaler, df_prices = train_and_eval("AAPL")
 pred = predict_specific_close(model, scaler, df_prices, dt.date(2025,10,1))
 print("Predicted Close:", round(pred, 2))
-
+```
 
 **Achieves strong short-term forecasting accuracy with RMSE ≈ 2.93 for AAPL.**
 
 ## 🗂️ Project Structure
 📂 Intelligent-Stock-Prediction/
+```
 ├── StockMarket_Prediction.ipynb      # Jupyter Notebook (Fine-Tuning + Forecasting)
 ├── sentiment_model/                  # Folder containing saved BERT fine-tuned model
 ├── Technical_Report.docx             # Full technical documentation
 ├── Presentation_PPT.pptx             # Final presentation slides
 ├── requirements.txt                  # Dependencies list
 └── README.md                         # This documentation file
+```
 
 ## 📈 Results Summary
+```
 Metric	Baseline	Fine-Tuned
 Accuracy	81.4%	89.7%
 F1-Score	79.2%	88.3%
 Precision	80.5%	87.9%
 Recall	77.8%	88.6%
 LSTM RMSE	—	2.93
+```
 
 ## ✅ Fine-tuned BERT model improved sentiment classification accuracy.
 ## 📈 LSTM provided consistent short-term stock trend forecasting.
