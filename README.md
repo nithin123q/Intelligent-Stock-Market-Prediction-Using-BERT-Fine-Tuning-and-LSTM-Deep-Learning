@@ -62,50 +62,50 @@ from datasets import load_dataset
 dataset = load_dataset("StephanAkkerman/stock-market-tweets-data")
 
 
-Loads financial tweets for sentiment analysis.
-If the dataset fails to load, use any CSV with text and label columns.
+**Loads financial tweets for sentiment analysis.
+**If the dataset fails to load, use any CSV with text and label columns.
 
 🧹 Step 2 — Preprocess Data
 
-Run the preprocessing and cleaning cell to:
+**Run the preprocessing and cleaning cell to:
 
-Clean and normalize text
+**Clean and normalize text
 
-Filter short tweets
+**Filter short tweets
 
-Tokenize using the BERT tokenizer
+**Tokenize using the BERT tokenizer
 
-Split into train / validation / test sets
+**Split into train / validation / test sets
 
 ✅ Example output:
 
-Preprocessing done.
-Splits – train 5000 | val 1000 | test 1000
+**Preprocessing done.
+**Splits – train 5000 | val 1000 | test 1000
 
 🧠 Step 3 — Fine-Tune Model
 trainer.train()
 
 
-Trains for 3 epochs (learning rate = 2e-5) and automatically saves:
+**Trains for 3 epochs (learning rate = 2e-5) and automatically saves:
 
-Logs → ./logs
+**Logs → ./logs
 
-Model checkpoints → ./results
+**Model checkpoints → ./results
 
 📊 Step 4 — Evaluate Performance
-results = trainer.evaluate(test_dataset)
-print(results)
+**results = trainer.evaluate(test_dataset)
+**print(results)
 
 
-Displays key metrics:
+**Displays key metrics:
 
-Accuracy
+**Accuracy
 
-Precision
+**Precision
 
-Recall
+**Recall
 
-F1-Score
+**F1-Score
 
 Compares fine-tuned model with baseline BERT-base-cased.
 
@@ -114,13 +114,13 @@ for i in incorrect_indices[:5]:
     print(test_dataset[i]['text'], predictions[i])
 
 
-Identifies common misclassifications such as:
+**Identifies common misclassifications such as:
 
-Sarcasm or irony
+**Sarcasm or irony
 
-Ambiguous text
+**Ambiguous text
 
-Sentiment reversals
+**Sentiment reversals
 
 🤖 Step 6 — Inference
 text = "Apple shares rally after strong iPhone sales."
@@ -128,7 +128,7 @@ pred = predict_with_fine_tuned_model(text, model, tokenizer)
 print("Predicted Sentiment:", pred.item())
 
 
-Predicts sentiment for new stock-related tweets using your fine-tuned BERT model.
+**Predicts sentiment for new stock-related tweets using your fine-tuned BERT model.
 
 💹 Step 7 — LSTM Stock Forecast (Optional)
 model, scaler, df_prices = train_and_eval("AAPL")
@@ -136,7 +136,7 @@ pred = predict_specific_close(model, scaler, df_prices, dt.date(2025,10,1))
 print("Predicted Close:", round(pred, 2))
 
 
-Achieves strong short-term forecasting accuracy with RMSE ≈ 2.93 for AAPL.
+**Achieves strong short-term forecasting accuracy with RMSE ≈ 2.93 for AAPL.
 
 🗂️ Project Structure
 📂 Intelligent-Stock-Prediction/
@@ -160,12 +160,12 @@ LSTM RMSE	—	2.93
 
 ⚙️ Setup Instructions
 
-Install all dependencies:
+**Install all dependencies:
 
 pip install -r requirements.txt
 
 
-To export your environment:
+**To export your environment:
 
 pip freeze > requirements.txt
 
@@ -173,17 +173,17 @@ pip freeze > requirements.txt
 
 Python 3.10+
 
-Hugging Face Transformers
+**Hugging Face Transformers
 
-TensorFlow / Keras
+**TensorFlow / Keras
 
-scikit-learn
+**scikit-learn
 
-pandas
+**pandas
 
-matplotlib
+**matplotlib
 
-yfinance (for stock data)
+**yfinance (for stock data)
 
 👨‍💻 Author
 
