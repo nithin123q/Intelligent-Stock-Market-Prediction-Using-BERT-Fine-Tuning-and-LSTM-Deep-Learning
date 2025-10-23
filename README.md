@@ -160,7 +160,7 @@ Accuracy	81.4%	89.7%
 F1-Score	79.2%	88.3%
 Precision	80.5%	87.9%
 Recall	77.8%	88.6%
-LSTM RMSE	—	2.93
+LSTM RMSE	—	7.29
 ```
 
 ## ✅ Fine-tuned BERT model improved sentiment classification accuracy.
