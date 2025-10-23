@@ -171,12 +171,12 @@ LSTM RMSE	—	2.93
 
 **Install all dependencies:**
 
-pip install -r requirements.txt
+```pip install -r requirements.txt```
 
 
 **To export your environment:**
 
-pip freeze > requirements.txt
+```pip freeze > requirements.txt```
 
 ## 💻 Technologies Used
 
@@ -197,6 +197,6 @@ Python 3.10+
 ## 👨‍💻 Author
 
 Nithin Yash Menezes
-Master’s in Information Systems (MSIS)
-📍 Northeastern University, Boston, MA
-📧 nithin.menezes@northeastern.edu
+**Master’s in Information Systems (MSIS)**
+**📍 Northeastern University, Boston, MA**
+**📧 nithin.menezes@northeastern.edu**
