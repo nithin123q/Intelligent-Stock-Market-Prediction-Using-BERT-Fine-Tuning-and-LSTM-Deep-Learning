@@ -65,7 +65,7 @@ dataset = load_dataset("StephanAkkerman/stock-market-tweets-data")
 **Loads financial tweets for sentiment analysis.**
 **If the dataset fails to load, use any CSV with text and label columns.**
 
-##🧹 Step 2 — Preprocess Data
+## 🧹 Step 2 — Preprocess Data
 
 **Run the preprocessing and cleaning cell to:**
 
