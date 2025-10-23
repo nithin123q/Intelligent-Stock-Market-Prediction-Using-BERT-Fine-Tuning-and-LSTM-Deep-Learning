@@ -146,8 +146,7 @@ print("Predicted Close:", round(pred, 2))
 ## 🗂️ Project Structure
 📂 Intelligent-Stock-Prediction/
 ```
-├── StockMarket_Prediction.ipynb      # Jupyter Notebook (Fine-Tuning + Forecasting)
-├── sentiment_model/                  # Folder containing saved BERT fine-tuned model
+├── StockMarket_Prediction.ipynb      # Colab Notebook (Fine-Tuning + Forecasting)
 ├── Technical_Report.docx             # Full technical documentation
 ├── Presentation_PPT.pptx             # Final presentation slides
 ├── requirements.txt                  # Dependencies list
